@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>جرد الدكان</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page">
+
+  <header class="masthead">
+    <div class="shop-icon">🏪</div>
+    <div class="masthead-text">
+      <h1>جرد الدكان</h1>
+      <p class="subtitle" id="todayDate"></p>
+    </div>
+  </header>
+
+  <main class="ledger">
+
+    <section class="inputs">
+      <div class="field">
+        <label for="cashYesterday">كاش أمس</label>
+        <div class="input-wrap">
+          <input type="number" id="cashYesterday" inputmode="decimal" placeholder="0.00" step="0.01" min="0">
+          <span class="unit">د.أ</span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="cashToday">كاش اليوم</label>
+        <div class="input-wrap">
+          <input type="number" id="cashToday" inputmode="decimal" placeholder="0.00" step="0.01" min="0">
+          <span class="unit">د.أ</span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="purchases">مشتريات اليوم</label>
+        <div class="input-wrap">
+          <input type="number" id="purchases" inputmode="decimal" placeholder="0.00" step="0.01" min="0">
+          <span class="unit">د.أ</span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="expenses">مصاريف اليوم</label>
+        <div class="input-wrap">
+          <input type="number" id="expenses" inputmode="decimal" placeholder="0.00" step="0.01" min="0">
+          <span class="unit">د.أ</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="results">
+      <p class="hint" id="resultHint">أدخل كاش أمس وكاش اليوم لحساب المبيعات تلقائيًا</p>
+
+      <div class="hero-result" id="heroResult">
+        <span class="hero-label">مبيعات اليوم</span>
+        <span class="hero-value" id="salesValue">—</span>
+      </div>
+
+      <div class="mini-results" id="miniResults">
+        <div class="mini-result">
+          <span class="mini-label">الكاش المتوقع</span>
+          <span class="mini-value" id="expectedCashValue">—</span>
+        </div>
+        <div class="mini-result">
+          <span class="mini-label">صافي الربح</span>
+          <span class="mini-value" id="profitValue">—</span>
+        </div>
+      </div>
+    </section>
+
+    <button class="save-btn" id="saveBtn">حفظ جرد اليوم</button>
+
+  </main>
+
+  <section class="history">
+    <button class="history-toggle" id="historyToggle" aria-expanded="false">
+      <span>سجل الجرد</span>
+      <span class="chevron" id="chevron">‹</span>
+    </button>
+
+    <div class="history-body" id="historyBody">
+      <div class="table-wrap">
+        <table id="historyTable">
+          <thead>
+            <tr>
+              <th>التاريخ</th>
+              <th>كاش أمس</th>
+              <th>كاش اليوم</th>
+              <th>المشتريات</th>
+              <th>المصاريف</th>
+              <th>المبيعات</th>
+              <th>الربح</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="historyTableBody"></tbody>
+        </table>
+        <p class="empty-history" id="emptyHistory">لا يوجد جرد محفوظ بعد</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot-note">تُحفظ بياناتك في متصفحك فقط، على هذا الجهاز</footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
