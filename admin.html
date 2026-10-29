@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>لوحة الإدارة · دعوة خطوبة جهاد وديما</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Aref+Ruqaa:wght@700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ivory:#f6f1e7;--paper:#fbf7ee;--brown:#6b4332;--ink:#4a2e22;--gold:#b9975b;--gold2:#d9bd85;--bad:#a4482f}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:radial-gradient(120% 80% at 50% 0,#fbf7ee,#f1e9d8);color:var(--brown);font-family:'Tajawal',sans-serif;line-height:1.7;min-height:100vh;padding:24px 16px 60px}
+[hidden]{display:none!important}
+.wrap{max-width:860px;margin:0 auto}
+h1{font:700 2.2rem/1.4 'Aref Ruqaa',serif;text-align:center}
+.sub{text-align:center;font:400 1.1rem 'Amiri',serif;color:var(--gold);margin-bottom:20px}
+.card{background:var(--paper);border:1px solid var(--gold2);border-radius:18px;padding:22px;box-shadow:0 18px 40px -24px rgba(74,46,34,.6)}
+.login{max-width:380px;margin:30px auto 0;display:flex;flex-direction:column;gap:14px}
+label{display:block;font-size:.95rem;margin-bottom:4px;color:var(--ink)}
+input{width:100%;font:inherit;font-size:1rem;color:var(--ink);background:var(--ivory);border:1px solid var(--gold2);border-radius:12px;padding:11px 14px}
+input:focus{outline:none;border-color:var(--brown);box-shadow:0 0 0 3px rgba(185,151,91,.3)}
+.btn{font:inherit;font-weight:500;cursor:pointer;border-radius:999px;padding:11px 24px;border:1px solid var(--gold);background:linear-gradient(135deg,#7a4e3a,#5d3828);color:#fbf1dc}
+.btn:disabled{opacity:.6;cursor:progress}
+.btn.s{background:transparent;color:var(--brown);border-color:var(--brown)}
+.btn.sm{padding:5px 14px;font-size:.9rem}
+.err{min-height:1.4em;color:var(--bad);font-size:.95rem;text-align:center}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.who{font-size:.9rem;opacity:.85;direction:ltr}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px}
+.stat{text-align:center;padding:16px 8px}
+.stat b{display:block;font:700 2.6rem/1.1 'Tajawal',sans-serif}
+.stat span{font-size:1rem}
+.item{border-top:1px solid rgba(185,151,91,.4);padding:14px 4px;display:grid;grid-template-columns:1fr auto;gap:6px 12px;align-items:start}
+.item:first-child{border-top:0}
+.nm{font-weight:700;font-size:1.15rem}
+.meta{font-size:.95rem;opacity:.9}
+.meta bdi{direction:ltr;unicode-bidi:isolate}
+.note{grid-column:1/-1;font-size:.95rem;background:var(--ivory);border-radius:10px;padding:8px 12px;white-space:pre-wrap;overflow-wrap:anywhere}
+.cnt{font:700 1.5rem 'Tajawal',sans-serif;text-align:center;min-width:48px}
+.cnt small{display:block;font-size:.75rem;font-weight:400}
+.dup{display:inline-block;margin-inline-start:8px;font-size:.78rem;font-weight:500;color:#fff;background:var(--bad);border-radius:999px;padding:1px 10px}
+.acts{grid-column:1/-1;display:flex;gap:8px;align-items:center}
+.empty{text-align:center;padding:26px 0;opacity:.8}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>لوحة الإدارة</h1>
+  <p class="sub">تأكيدات حضور خطوبة جهاد وديما</p>
+
+  <div id="loginView" class="card login" hidden>
+    <form id="loginForm" novalidate style="display:flex;flex-direction:column;gap:14px">
+      <div><label for="em">البريد الإلكتروني</label><input id="em" type="email" dir="ltr" autocomplete="username" required></div>
+      <div><label for="pw">كلمة المرور</label><input id="pw" type="password" dir="ltr" autocomplete="current-password" required></div>
+      <p class="err" id="lErr" role="alert"></p>
+      <button class="btn" id="lBtn" type="submit">تسجيل الدخول</button>
+    </form>
+  </div>
+
+  <div id="loading" class="empty">جارٍ التحميل…</div>
+  <p class="err" id="fatal" role="alert"></p>
+
+  <div id="panel" hidden>
+    <div class="bar">
+      <span class="who" id="who"></span>
+      <button class="btn s sm" id="out" type="button">تسجيل الخروج</button>
+    </div>
+    <div class="stats">
+      <div class="card stat"><b id="total">0</b><span>إجمالي الحضور</span></div>
+      <div class="card stat"><b id="num">0</b><span>عدد التأكيدات</span></div>
+    </div>
+    <p class="err" id="pErr" role="alert"></p>
+    <div class="card" id="list"></div>
+  </div>
+</div>
+
+<script type="module">
+const $=s=>document.querySelector(s);
+const show=(id,on)=>{$(id).hidden=!on};
+const authMsg=c=>({
+  'auth/invalid-credential':'البريد أو كلمة المرور غير صحيحة.',
+  'auth/wrong-password':'البريد أو كلمة المرور غير صحيحة.',
+  'auth/user-not-found':'البريد أو كلمة المرور غير صحيحة.',
+  'auth/invalid-email':'صيغة البريد الإلكتروني غير صحيحة.',
+  'auth/too-many-requests':'محاولات كثيرة. انتظر قليلًا ثم أعد المحاولة.',
+  'auth/network-request-failed':'تعذّر الاتصال بالإنترنت.',
+  'auth/operation-not-allowed':'تسجيل الدخول بالبريد وكلمة المرور غير مفعّل في Firebase (Authentication ← Sign-in method).',
+  'auth/unauthorized-domain':'نطاق الموقع غير مضاف في Firebase (Authentication ← Settings ← Authorized domains).'
+}[c]||'تعذّر تسجيل الدخول ('+(c||'خطأ غير معروف')+').');
+
+let cfg;
+try{cfg=(await import('./firebase-config.js')).firebaseConfig}catch(e){cfg=null}
+if(!cfg||!cfg.apiKey||!cfg.projectId||/PASTE|YOUR/i.test(cfg.apiKey+cfg.projectId)){
+  show('#loading',false);
+  $('#fatal').textContent='إعدادات Firebase غير مكتملة في firebase-config.js. املأ القيم الحقيقية من Firebase Console ثم أعد رفع الملف.';
+}else{
+  const b='https://www.gstatic.com/firebasejs/10.12.2/';
+  let A,Au,F;
+  try{[A,Au,F]=await Promise.all([import(b+'firebase-app.js'),import(b+'firebase-auth.js'),import(b+'firebase-firestore.js')])}
+  catch(e){show('#loading',false);$('#fatal').textContent='تعذّر تحميل مكتبات Firebase. تحقّق من الاتصال بالإنترنت.'}
+  if(A){
+    const app=A.initializeApp(cfg),auth=Au.getAuth(app),db=F.getFirestore(app);
+    let unsub=null;
+
+    function render(snap){
+      const rows=snap.docs.map(d=>({id:d.id,...d.data()}));
+      const norm=s=>(s||'').toString().replace(/\s+/g,' ').trim().toLowerCase();
+      const digits=s=>(s||'').replace(/\D/g,'');
+      const nameN={},phoneN={};
+      rows.forEach(r=>{const n=norm(r.name),p=digits(r.phone);if(n)nameN[n]=(nameN[n]||0)+1;if(p.length>=7)phoneN[p]=(phoneN[p]||0)+1});
+      $('#total').textContent=rows.reduce((a,r)=>a+(Number(r.count)||0),0);
+      $('#num').textContent=rows.length;
+      const list=$('#list');list.textContent='';
+      if(!rows.length){const e=document.createElement('p');e.className='empty';e.textContent='لا توجد تأكيدات حضور بعد.';list.appendChild(e);return}
+      rows.forEach(r=>{
+        const it=document.createElement('div');it.className='item';
+        const left=document.createElement('div');
+        const nm=document.createElement('div');nm.className='nm';nm.textContent=r.name||'—';
+        const p=digits(r.phone);
+        if(nameN[norm(r.name)]>1||(p.length>=7&&phoneN[p]>1)){const d=document.createElement('span');d.className='dup';d.textContent='قد يكون مكررًا';nm.appendChild(d)}
+        const meta=document.createElement('div');meta.className='meta';
+        meta.append('الهاتف: ');
+        const bd=document.createElement('bdi');bd.textContent=r.phone||'—';meta.appendChild(bd);
+        const t=r.createdAt&&r.createdAt.toDate?r.createdAt.toDate().toLocaleString('ar-JO',{dateStyle:'medium',timeStyle:'short'}):'';
+        if(t)meta.append(' · '+t);
+        left.append(nm,meta);
+        const c=document.createElement('div');c.className='cnt';c.textContent=r.count;
+        const sm=document.createElement('small');sm.textContent='حضور';c.appendChild(sm);
+        it.append(left,c);
+        if(r.notes){const n=document.createElement('div');n.className='note';n.textContent=r.notes;it.appendChild(n)}
+        const acts=document.createElement('div');acts.className='acts';
+        const del=document.createElement('button');del.className='btn s sm';del.type='button';del.textContent='حذف';
+        del.addEventListener('click',async()=>{
+          if(!confirm('حذف تأكيد «'+(r.name||'')+'» نهائيًا؟'))return;
+          del.disabled=true;
+          try{await F.deleteDoc(F.doc(db,'rsvps',r.id))}
+          catch(e){del.disabled=false;$('#pErr').textContent='تعذّر الحذف: '+(e.code||e.message)}
+        });
+        acts.appendChild(del);it.appendChild(acts);
+        list.appendChild(it);
+      });
+    }
+
+    function startListening(user){
+      show('#loading',false);show('#loginView',false);show('#panel',true);
+      $('#who').textContent=user.email||'';$('#pErr').textContent='';
+      if(unsub)unsub();
+      const q=F.query(F.collection(db,'rsvps'),F.orderBy('createdAt','desc'));
+      unsub=F.onSnapshot(q,render,e=>{
+        $('#total').textContent='—';$('#num').textContent='—';$('#list').textContent='';
+        $('#pErr').textContent=e.code==='permission-denied'
+          ?'هذا الحساب ليس حساب صاحب الدعوة. تأكد أن User UID في firestore.rules يطابق UID هذا الحساب، وأنك نشرت (Publish) القواعد.'
+          :(e.code==='failed-precondition'?'قاعدة بيانات Firestore غير مُنشأة أو يلزم فهرس. راجع Firebase Console.':'تعذّرت قراءة البيانات: '+(e.code||e.message));
+      });
+    }
+    function showLogin(){
+      if(unsub){unsub();unsub=null}
+      show('#loading',false);show('#panel',false);show('#loginView',true);
+    }
+
+    Au.onAuthStateChanged(auth,u=>{
+      /* المستخدم المجهول (من اختبار الدعوة في نفس المتصفح) لا يُعدّ حساب إدارة */
+      if(u&&!u.isAnonymous)startListening(u);else showLogin();
+    });
+
+    $('#loginForm').addEventListener('submit',async e=>{
+      e.preventDefault();
+      const em=$('#em').value.trim(),pw=$('#pw').value;$('#lErr').textContent='';
+      if(!em||!pw){$('#lErr').textContent='أدخل البريد وكلمة المرور.';return}
+      $('#lBtn').disabled=true;
+      try{await Au.signInWithEmailAndPassword(auth,em,pw)}
+      catch(err){console.warn('[admin]',err);$('#lErr').textContent=authMsg(err.code)}
+      finally{$('#lBtn').disabled=false}
+    });
+    $('#out').addEventListener('click',()=>Au.signOut(auth));
+  }
+}
+</script>
+</body>
+</html>

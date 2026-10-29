@@ -1,167 +1,622 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>جرد الدكان</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>دعوة خطوبة جهاد وديما</title>
+<meta name="description" content="يتشرف السيد إياد عطا حسين والحاج خالد ناصر رفيق بدعوتكم لحضور خطوبة ولديهما جهاد وديما - الخميس 5 نوفمبر 2026">
+<meta name="theme-color" content="#f6f1e7">
+<link rel="canonical" href="https://YOUR-DOMAIN.com/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:site_name" content="دعوة خطوبة جهاد وديما">
+<meta property="og:title" content="دعوة خطوبة جهاد وديما">
+<meta property="og:description" content="يتشرف السيد إياد عطا حسين والحاج خالد ناصر رفيق بدعوتكم لحضور خطوبة ولديهما جهاد وديما - الخميس 5 نوفمبر 2026 - قاعة أعمدة، الزرقاء">
+<meta property="og:url" content="https://YOUR-DOMAIN.com/">
+<meta property="og:image" content="https://YOUR-DOMAIN.com/og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="دعوة خطوبة جهاد وديما - الخميس 5 نوفمبر 2026 - قاعة أعمدة، الزرقاء">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="دعوة خطوبة جهاد وديما">
+<meta name="twitter:description" content="الخميس 5 نوفمبر 2026 - قاعة أعمدة، الزرقاء">
+<meta name="twitter:image" content="https://YOUR-DOMAIN.com/og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700;900&family=Almarai:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Aref+Ruqaa:wght@700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ivory:#f6f1e7;--paper:#fbf7ee;--brown:#6b4332;--ink:#4a2e22;--gold:#b9975b;--gold2:#d9bd85;--line:rgba(107,67,50,.28)}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{background:radial-gradient(120% 80% at 50% 0,#fbf7ee,#f1e9d8);color:var(--brown);font-family:'Tajawal',sans-serif;line-height:1.8;min-height:100vh;overflow-x:hidden}
+body.lock{overflow:hidden;height:100vh}
+button,a{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+/* أغصان الزهور */
+#flowers{position:fixed;inset:0;pointer-events:none;z-index:1;overflow:hidden}
+#flowers .defs{position:absolute;width:0;height:0}
+.sp{position:absolute;height:min(36vh,330px);width:auto;aspect-ratio:100/440;overflow:visible;animation:sway 9s ease-in-out infinite alternate}
+.sp.tl{left:-3px;top:-2px;transform-origin:0 0}
+.sp.tr{right:-3px;top:-2px;transform-origin:100% 0;animation-delay:-3s}
+.sp.bl{left:-3px;bottom:-2px;transform-origin:0 100%;animation-delay:-5s;height:min(42vh,380px)}
+.sp.br{right:-3px;bottom:-2px;transform-origin:100% 100%;animation-delay:-2s;height:min(40vh,360px)}
+@keyframes sway{from{rotate:-1.3deg}to{rotate:1.3deg}}
+.lf,.tw{animation:flut var(--s,6s) ease-in-out var(--d,0s) infinite alternate}
+@keyframes flut{from{rotate:calc(var(--a,2.4deg)*-1)}to{rotate:var(--a,2.4deg)}}
+@media (min-width:700px){.sp{height:min(50vh,520px)}.sp.bl{height:min(58vh,560px)}.sp.br{height:min(54vh,540px)}}
+.dust{position:fixed;inset:0;pointer-events:none;z-index:1;overflow:hidden}
+.dust i{position:absolute;bottom:-10px;width:4px;height:4px;border-radius:50%;background:var(--gold2);opacity:0;box-shadow:0 0 8px 2px rgba(217,189,133,.7);animation:rise linear infinite}
+@keyframes rise{0%{opacity:0;transform:translateY(0)}15%{opacity:.8}100%{opacity:0;transform:translateY(-105vh) translateX(24px)}}
+
+/* مشهد الظرف */
+#stage{position:fixed;inset:0;z-index:50;display:grid;place-items:center;background:radial-gradient(100% 80% at 50% 40%,#fbf7ee,#eadfc8);transition:opacity 1.2s ease,visibility 1.2s}
+#stage.done{opacity:0;visibility:hidden}
+.glow{position:absolute;width:140vmin;height:140vmin;background:radial-gradient(circle,rgba(217,189,133,.42),transparent 60%);animation:pulse 5s ease-in-out infinite alternate}
+@keyframes pulse{from{opacity:.55;transform:scale(.92)}to{opacity:1;transform:scale(1.04)}}
+.wrap{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:56px}
+.env{position:relative;width:min(86vw,400px);aspect-ratio:1.45;perspective:1300px;cursor:pointer;border:0;background:none;animation:float 4.5s ease-in-out infinite}
+.env.open{animation:none}
+@keyframes float{50%{transform:translateY(-8px)}}
+.env>*{position:absolute;inset:0}
+.eb{background:linear-gradient(160deg,#7a4e3a,#5d3828);border-radius:6px;box-shadow:0 24px 50px -12px rgba(74,46,34,.55)}
+.ec{inset:7% 6% 9%;background:var(--paper);border-radius:4px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;border:1px solid var(--gold2);outline:5px solid var(--paper);outline-offset:-9px;transition:transform 1.4s cubic-bezier(.3,.8,.2,1) .7s,opacity 1s;z-index:2}
+.ec small{font-size:.8rem;color:var(--gold)}
+.ec b{font:700 clamp(1.5rem,7vw,2.1rem)/1.3 'Aref Ruqaa',serif;color:var(--brown)}
+.env.open .ec{transform:translateY(-58%) scale(1.04)}
+.ep{z-index:3;background:linear-gradient(180deg,#8a5a43,#6b4332);clip-path:polygon(0 0,50% 54%,100% 0,100% 100%,0 100%);border-radius:6px}
+.ef{z-index:4;background:linear-gradient(180deg,#9b6a50,#7d513b);clip-path:polygon(0 0,100% 0,50% 62%);transform-origin:top;transition:transform .9s cubic-bezier(.5,0,.2,1),z-index 0s .45s;filter:drop-shadow(0 6px 6px rgba(0,0,0,.25))}
+.env.open .ef{transform:rotateX(180deg);z-index:1}
+.seal{inset:auto;left:50%;top:49%;width:15%;aspect-ratio:1;translate:-50% -50%;z-index:5;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ecd29a,#b9975b 55%,#8c6b35);display:grid;place-items:center;font:700 1.5rem 'Amiri',serif;color:#5d3828;box-shadow:0 3px 8px rgba(0,0,0,.4);transition:opacity .4s,scale .5s}
+.env.open .seal{opacity:0;scale:.4}
+.hint{font-size:1.05rem;color:var(--brown);letter-spacing:.04em;transition:opacity .5s}
+.hint.hide{opacity:0}
+
+/* الدعوة */
+main{position:relative;z-index:2;max-width:640px;margin:0 auto;padding:72px 34px 110px;text-align:center;opacity:0;transition:opacity 1.2s}
+main.go{opacity:1}
+.rv{opacity:0;transform:translateY(26px);transition:opacity 1s,transform 1s}
+.rv.in{opacity:1;transform:none}
+.bis{font:700 1.6rem 'Amiri',serif;color:var(--gold)}
+.bless{font:400 1.2rem 'Amiri',serif;margin-top:14px}
+.quote{font:400 1.45rem/1.9 'Amiri',serif;margin:30px 0 8px}
+.rule{display:flex;align-items:center;gap:12px;justify-content:center;margin:34px auto;max-width:320px;color:var(--gold)}
+.rule::before,.rule::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.hosts{display:flex;justify-content:center;align-items:center;gap:22px;flex-wrap:wrap}
+.h small{display:block;font-size:1rem;color:var(--gold);line-height:1.2}
+.h b{font:700 clamp(1.35rem,5.5vw,1.8rem)/1.5 'Tajawal',sans-serif}
+.amp{font:400 2.6rem 'Amiri',serif;color:var(--brown);line-height:1}
+.invite{font:400 1.3rem 'Amiri',serif;margin-top:26px}
+.names{display:flex;justify-content:center;align-items:center;gap:clamp(14px,5vw,34px);margin:18px 0 8px;font:700 clamp(3.6rem,19vw,6.4rem)/1.35 'Aref Ruqaa',serif;color:var(--brown)}
+.names .am{font:400 clamp(2rem,9vw,3.2rem) 'Amiri',serif;color:var(--gold)}
+.names span{display:inline-block;opacity:0;filter:blur(14px);transform:scale(1.15)}
+.go .names span{animation:nm 1.8s cubic-bezier(.2,.7,.2,1) forwards}
+.go .names span:nth-child(1){animation-delay:.5s}
+.go .names span:nth-child(2){animation-delay:1.2s}
+.go .names span:nth-child(3){animation-delay:1.9s}
+@keyframes nm{to{opacity:1;filter:blur(0);transform:none}}
+.names .n{background:linear-gradient(100deg,var(--brown) 30%,#c8a560 50%,var(--brown) 70%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation-name:nm,shine!important;animation-duration:1.8s,5s;animation-delay:.5s,3s;animation-iteration-count:1,infinite;animation-fill-mode:forwards,none}
+.names .n+.am+.n{animation-delay:1.9s,3s}
+@keyframes shine{from{background-position:120% 0}to{background-position:-120% 0}}
+.under{height:1px;background:linear-gradient(90deg,transparent,var(--brown),transparent);max-width:380px;margin:0 auto 12px}
+.date{font:500 1.5rem 'Tajawal',sans-serif;letter-spacing:.28em;direction:ltr}
+.god{font:400 1.25rem 'Amiri',serif;margin-top:6px}
+.cd{display:flex;justify-content:center;gap:10px;direction:rtl;margin:8px 0}
+.u{flex:1;max-width:100px;padding:16px 4px 10px;background:rgba(251,247,238,.75);border:1px solid var(--gold2);border-radius:14px;box-shadow:0 10px 24px -14px rgba(74,46,34,.5)}
+.u b{display:block;font:700 2rem/1.1 'Tajawal',sans-serif;direction:ltr;transition:transform .3s}
+.u b.t{transform:translateY(-4px) scale(1.08);color:var(--gold)}
+.u span{font-size:.9rem}
+.cdmsg{font:400 1.3rem 'Amiri',serif;margin-top:12px;min-height:1.8em}
+.info{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:8px 0 30px}
+.i{padding:6px 2px}
+.i svg{width:46px;height:46px;fill:none;stroke:var(--brown);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;transition:transform .5s}
+.i:hover svg{transform:translateY(-4px) rotate(-4deg)}
+.i p{font-size:1.05rem;line-height:1.5;margin-top:8px}
+.i p small{display:block;font-size:.95rem;opacity:.85}
+.btns{display:flex;flex-direction:column;align-items:center;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-width:250px;padding:14px 30px;border-radius:999px;text-decoration:none;cursor:pointer;font-weight:500;font-size:1.08rem;transition:transform .3s,box-shadow .3s,background .3s}
+.btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.p{background:linear-gradient(135deg,#7a4e3a,#5d3828);color:#fbf1dc;border:1px solid var(--gold);box-shadow:0 12px 26px -12px rgba(74,46,34,.8)}
+.p:hover{transform:translateY(-3px);box-shadow:0 16px 30px -12px rgba(74,46,34,.8)}
+.s{border:1px solid var(--brown);background:transparent}
+.s:hover{background:rgba(107,67,50,.08);transform:translateY(-2px)}
+.dua{font:700 1.5rem/1.9 'Amiri',serif;margin-top:40px}
+.notes{display:inline-flex;flex-direction:column;gap:12px;margin-top:6px;text-align:right}
+.nt{display:flex;align-items:center;gap:12px;font-size:1.02rem}
+.nt svg{flex:none;width:34px;height:34px;fill:none;stroke:var(--brown);stroke-width:1.5;stroke-linecap:round}
+.heart{color:var(--brown);font-size:1.1rem}
+
+/* الموسيقى */
+#mus{position:fixed;z-index:60;left:16px;top:calc(16px + env(safe-area-inset-top,0px));width:46px;height:46px;border-radius:50%;border:1px solid var(--gold);background:rgba(251,247,238,.9);display:grid;place-items:center;cursor:pointer;box-shadow:0 8px 20px -10px rgba(74,46,34,.6);opacity:0;visibility:hidden;transition:opacity 1s}
+#mus.show{opacity:1;visibility:visible}
+#mus svg{width:22px;height:22px;fill:var(--brown)}
+#mus .ps{display:none}
+#mus.on .pl{display:none}
+#mus.on .ps{display:block}
+#mus.on{animation:beat 1.6s ease-in-out infinite}
+@keyframes beat{50%{box-shadow:0 0 0 8px rgba(185,151,91,.2)}}
+#ytwrap{position:fixed;right:0;bottom:0;width:200px;height:200px;opacity:.01;pointer-events:none;z-index:-1;overflow:hidden}
+#mus.err{opacity:.6}
+#toast{position:fixed;z-index:70;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));translate:-50% 20px;max-width:90vw;padding:12px 20px;border-radius:14px;background:var(--ink);color:#fbf1dc;font-size:.95rem;text-align:center;opacity:0;pointer-events:none;transition:.4s}
+#toast.show{opacity:1;translate:-50% 0}
+@media (max-width:420px){.btn{min-width:100%}.u b{font-size:1.65rem}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition-duration:.01s!important;transition-delay:0s!important}.names span{opacity:1;filter:none;transform:none}.rv{opacity:1;transform:none}}
+
+/* نموذج تأكيد الحضور */
+[hidden]{display:none!important}
+button.btn{font-family:inherit;border:0}
+button.btn.p{border:1px solid var(--gold)}
+button.btn.s{border:1px solid var(--brown)}
+.btn[disabled]{opacity:.65;cursor:progress;transform:none}
+.mdl{position:fixed;inset:0;z-index:80;display:grid;place-items:center;padding:16px;padding-bottom:max(16px,env(safe-area-inset-bottom,0px))}
+.mdl-bg{position:absolute;inset:0;background:rgba(74,46,34,.5);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);animation:fade .35s both}
+.mdl-box{position:relative;width:100%;max-width:440px;max-height:calc(100vh - 32px);max-height:calc(100dvh - 32px);overflow:auto;background:var(--paper);border:1px solid var(--gold2);border-radius:22px;padding:30px 24px 24px;text-align:center;box-shadow:0 30px 60px -20px rgba(74,46,34,.65);animation:pop .45s cubic-bezier(.2,.8,.2,1) both;outline:none}
+.mdl-box::before{content:"";position:absolute;inset:7px;border:1px solid rgba(185,151,91,.45);border-radius:16px;pointer-events:none}
+@keyframes fade{from{opacity:0}}
+@keyframes pop{from{opacity:0;transform:translateY(18px) scale(.97)}}
+.mdl-x{position:absolute;top:12px;left:14px;width:38px;height:38px;border-radius:50%;border:0;background:none;font-size:1.7rem;line-height:1;cursor:pointer;color:var(--brown);z-index:2}
+.mdl-x:hover{background:rgba(107,67,50,.08)}
+.mdl-k{font:400 1.15rem 'Amiri',serif;color:var(--gold)}
+.mdl h2{font:700 2rem/1.4 'Aref Ruqaa',serif;color:var(--brown);margin-bottom:14px}
+#rsvpForm{text-align:right;display:flex;flex-direction:column;gap:14px}
+.fld label{display:block;font-size:.95rem;margin-bottom:4px;color:var(--ink)}
+.fld label em{color:#a4482f;font-style:normal}
+.fld label span{opacity:.7;font-size:.85rem}
+.fld input,.fld select,.fld textarea{width:100%;font:inherit;font-size:1rem;color:var(--ink);background:var(--ivory);border:1px solid var(--gold2);border-radius:12px;padding:11px 14px;transition:border-color .2s,box-shadow .2s;-webkit-appearance:none;appearance:none}
+.fld select{background-image:linear-gradient(45deg,transparent 50%,var(--brown) 50%),linear-gradient(135deg,var(--brown) 50%,transparent 50%);background-position:18px 52%,24px 52%;background-size:6px 6px;background-repeat:no-repeat;padding-left:40px}
+.fld textarea{resize:vertical;min-height:84px}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-color:var(--brown);box-shadow:0 0 0 3px rgba(185,151,91,.3)}
+.fld input[aria-invalid=true]{border-color:#a4482f}
+.hp{position:absolute!important;left:-9999px;width:1px;height:1px;opacity:0}
+.err{min-height:1.4em;font-size:.95rem;color:#a4482f;text-align:center}
+#rsvpForm .btn{width:100%;min-width:0}
+.ok svg{width:66px;height:66px;fill:none;stroke:var(--gold);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;margin-bottom:6px}
+.ok svg path{stroke-dasharray:40;stroke-dashoffset:40;animation:tick .7s .25s ease forwards}
+@keyframes tick{to{stroke-dashoffset:0}}
+#doneText{font:400 1.25rem/1.9 'Amiri',serif;margin-bottom:18px}
+.mdl-actions{display:flex;flex-direction:column;align-items:center;gap:10px}
+.mdl-actions .btn{width:100%;min-width:0;padding:12px 20px;font-size:1rem}
+.lnk{background:none;border:0;cursor:pointer;text-decoration:underline;text-underline-offset:4px;font-size:.95rem;padding:8px;color:var(--brown)}
+#cancelAsk{font-size:.98rem}
+#cancelAsk .lnk{font-weight:700}
+body.mo{overflow:hidden}
+.btn span{text-align:center}
+@media (max-width:420px){.btn{padding:14px 14px;font-size:1rem;gap:8px}}
+</style>
 </head>
-<body>
+<body class="lock">
 
-<!-- ===== شاشة تسجيل الدخول ===== -->
-<section id="authScreen" class="screen">
-  <div class="auth-card">
-    <div class="brand">
-      <span class="brand-icon">🏪</span>
-      <h1>جرد الدكان</h1>
-      <p class="brand-sub">سجل دخولك لمتابعة جردك اليومي</p>
-    </div>
+<div class="dust" id="dust" aria-hidden="true"></div>
+<div id="flowers" aria-hidden="true"></div>
 
-    <form id="loginForm" class="auth-form">
-      <label>
-        اسم المستخدم
-        <input type="text" id="loginUsername" autocomplete="username" required>
-      </label>
-      <label>
-        كلمة المرور
-        <input type="password" id="loginPassword" autocomplete="current-password" required>
-      </label>
-      <p id="loginError" class="form-error"></p>
-      <button type="submit" class="btn btn-primary">تسجيل الدخول</button>
-    </form>
-
-    <button id="showSignup" class="link-btn">ما عندك حساب؟ إنشاء حساب جديد</button>
-
-    <form id="signupForm" class="auth-form hidden">
-      <label>
-        اسم المستخدم
-        <input type="text" id="signupUsername" required>
-      </label>
-      <label>
-        كلمة المرور
-        <input type="password" id="signupPassword" required>
-      </label>
-      <label>
-        تأكيد كلمة المرور
-        <input type="password" id="signupPasswordConfirm" required>
-      </label>
-      <p id="signupError" class="form-error"></p>
-      <button type="submit" class="btn btn-primary">إنشاء الحساب</button>
-    </form>
-
-    <button id="showLogin" class="link-btn hidden">رجوع لتسجيل الدخول</button>
+<section id="stage" aria-label="ظرف الدعوة">
+  <div class="glow"></div>
+  <div class="wrap">
+    <button class="env" id="env" aria-label="افتح الدعوة">
+      <div class="eb"></div>
+      <div class="ec"><small>دعوة خطوبة</small><b>جهاد &amp; ديما</b></div>
+      <div class="ep"></div>
+      <div class="ef"></div>
+      <div class="seal">&amp;</div>
+    </button>
+    <p class="hint" id="hint">اضغط على الظرف لفتح الدعوة</p>
   </div>
 </section>
 
-<!-- ===== الشاشة الرئيسية: الجرد ===== -->
-<section id="mainScreen" class="screen hidden">
-  <header class="topbar">
-    <div class="topbar-title">
-      <span class="brand-icon small">🏪</span>
-      <h1>جرد الدكان</h1>
-    </div>
-    <div class="topbar-user">
-      <span id="welcomeUser" class="welcome"></span>
-      <button id="logoutBtn" class="btn btn-ghost">تسجيل الخروج</button>
-    </div>
-  </header>
+<button id="mus" aria-label="تشغيل أو إيقاف الأغنية" title="تشغيل أو إيقاف الموسيقى">
+  <svg class="pl" viewBox="0 0 24 24"><path d="M9 18V6l10 6zM9 18"/></svg>
+  <svg class="ps" viewBox="0 0 24 24"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg>
+</button>
+<div id="ytwrap" aria-hidden="true"><div id="ytp"></div></div>
+<div id="toast" role="status"></div>
 
-  <main class="content">
-    <p id="todayDate" class="today-date"></p>
+<main id="main">
+  <p class="bis rv">بسم الله الرحمن الرحيم</p>
+  <p class="bless rv">اللهم بارك لهما وبارك عليهما واجمع بينهما في خير</p>
+  <p class="quote rv">إنّ السرور إذا تشارك ضوعفت بسماته<br>مع زمرة الأحباب</p>
+  <div class="rule rv">✦</div>
 
-    <div class="card entry-card">
-      <div class="field-grid">
-        <label class="field">
-          <span>كاش أمس</span>
-          <div class="input-money">
-            <input type="number" id="cashYesterday" min="0" step="0.01" placeholder="0.00">
-            <span class="currency">د.أ</span>
-          </div>
-        </label>
-        <label class="field">
-          <span>كاش اليوم</span>
-          <div class="input-money">
-            <input type="number" id="cashToday" min="0" step="0.01" placeholder="0.00">
-            <span class="currency">د.أ</span>
-          </div>
-        </label>
-        <label class="field">
-          <span>مشتريات اليوم</span>
-          <div class="input-money">
-            <input type="number" id="purchases" min="0" step="0.01" placeholder="0.00">
-            <span class="currency">د.أ</span>
-          </div>
-        </label>
-        <label class="field">
-          <span>مصاريف اليوم</span>
-          <div class="input-money">
-            <input type="number" id="expenses" min="0" step="0.01" placeholder="0.00">
-            <span class="currency">د.أ</span>
-          </div>
-        </label>
+  <div class="hosts rv">
+    <div class="h"><small>السيد</small><b>إياد عطا حسين</b></div>
+    <div class="amp">&amp;</div>
+    <div class="h"><small>الحاج</small><b>خالد ناصر رفيق</b></div>
+  </div>
+  <p class="invite rv">يتشرفان بدعوتكم لحضور خطوبة ولديهما</p>
+
+  <div class="names" aria-label="جهاد وديما"><span class="n">جهاد</span><span class="am">&amp;</span><span class="n">ديما</span></div>
+  <div class="under"></div>
+  <p class="date rv">5 . 11 . 2026</p>
+  <p class="god rv">وذلك بمشيئة الله</p>
+
+  <div class="rule rv">✦</div>
+
+  <div class="rv">
+    <div class="cd" id="cd" aria-live="off">
+      <div class="u"><b id="d">00</b><span>يوم</span></div>
+      <div class="u"><b id="h">00</b><span>ساعة</span></div>
+      <div class="u"><b id="m">00</b><span>دقيقة</span></div>
+      <div class="u"><b id="s">00</b><span>ثانية</span></div>
+    </div>
+    <p class="cdmsg" id="cdmsg"></p>
+  </div>
+
+  <div class="rule rv">✦</div>
+
+  <div class="info rv">
+    <div class="i">
+      <svg viewBox="0 0 48 48"><rect x="7" y="10" width="34" height="31" rx="3"/><path d="M7 19h34M16 6v8M32 6v8M15 26h3M22.5 26h3M30 26h3M15 33h3M22.5 33h3M30 33h3"/></svg>
+      <p>الخميس<small>5 نوفمبر 2026</small></p>
+    </div>
+    <div class="i">
+      <svg viewBox="0 0 48 48"><path d="M24 43S10 29 10 19a14 14 0 0 1 28 0c0 10-14 24-14 24z"/><circle cx="24" cy="19" r="5"/></svg>
+      <p>قاعة أعمدة<small>الزرقاء</small></p>
+    </div>
+    <div class="i">
+      <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="18"/><path d="M24 12v13l8 5"/></svg>
+      <p>الاستقبال<small>من 7:00 مساءً<br>حتى 9:00 مساءً</small></p>
+    </div>
+  </div>
+
+  <div class="btns rv">
+    <button class="btn p" id="rsvpOpen" type="button" aria-haspopup="dialog">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M7.8 12.4l3 3 5.6-6.4"/></svg>
+      <span id="rsvpOpenTxt">تأكيد الحضور</span>
+    </button>
+    <a class="btn s" href="https://maps.app.goo.gl/93anydQjeiMpYPwy5" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M12 22s-7-7-7-12a7 7 0 0 1 14 0c0 5-7 12-7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+      <span>افتح موقع القاعة على خرائط Google</span>
+    </a>
+  </div>
+
+  <p class="dua rv">اللهم اجعلها حياةً سعيدةً مديدة،<br>وذلك بمشيئة الله</p>
+
+  <div class="rule rv"><span class="heart">♥</span></div>
+
+  <div class="notes rv">
+    <div class="nt">
+      <svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="15"/><circle cx="14" cy="13" r="2.5"/><circle cx="23" cy="15" r="2"/><path d="M10 25c0-4 2-6 4-6s4 2 4 6M20 25c0-3 1.5-5 3-5s3 2 3 5M6 6l24 24"/></svg>
+      <span>نرجو من الكرام عدم اصطحاب الأطفال</span>
+    </div>
+    <div class="nt">
+      <svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="15"/><rect x="13" y="9" width="10" height="18" rx="2"/><path d="M6 6l24 24"/></svg>
+      <span>نرجو التكرّم بعدم التصوير بالهواتف الخلوية</span>
+    </div>
+  </div>
+</main>
+
+<div class="mdl" id="rsvp" hidden>
+  <div class="mdl-bg" data-close></div>
+  <div class="mdl-box" role="dialog" aria-modal="true" aria-labelledby="rsvpTitle" tabindex="-1">
+    <button class="mdl-x" type="button" data-close aria-label="إغلاق">&times;</button>
+    <div id="rsvpFormView">
+      <p class="mdl-k">يسعدنا حضوركم</p>
+      <h2 id="rsvpTitle">تأكيد الحضور</h2>
+      <form id="rsvpForm" novalidate>
+        <div class="fld"><label for="rName">الاسم <em>*</em></label><input id="rName" type="text" maxlength="60" autocomplete="name" required></div>
+        <div class="fld"><label for="rPhone">رقم الهاتف <span>(اختياري)</span></label><input id="rPhone" type="tel" inputmode="tel" dir="ltr" maxlength="20" autocomplete="tel" style="text-align:right"></div>
+        <div class="fld"><label for="rCount">عدد الحضور</label><select id="rCount"></select></div>
+        <div class="fld"><label for="rNotes">ملاحظات <span>(اختياري)</span></label><textarea id="rNotes" rows="3" maxlength="300"></textarea></div>
+        <input class="hp" type="text" id="rHp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <p class="err" id="rErr" role="alert"></p>
+        <button class="btn p" id="rSubmit" type="submit">تأكيد الحضور</button>
+      </form>
+    </div>
+    <div id="rsvpDoneView" hidden>
+      <div class="ok"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="20"/><path d="M15 25l6 6 12-13"/></svg></div>
+      <h2 id="doneTitle">شكرًا لتأكيد حضورك</h2>
+      <p id="doneText"></p>
+      <div class="mdl-actions">
+        <a class="btn s" id="calLink" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>
+          أضف الموعد إلى التقويم
+        </a>
+        <button class="btn s" id="rEdit" type="button">تعديل التأكيد</button>
+        <button class="lnk" id="rCancel" type="button">إلغاء التأكيد</button>
+        <p id="cancelAsk" hidden>هل تريد إلغاء تأكيد حضورك؟ <button class="lnk" id="cancelYes" type="button">نعم، إلغاء</button> <button class="lnk" id="cancelNo" type="button">رجوع</button></p>
+        <p class="err" id="dErr" role="alert"></p>
       </div>
-
-      <div class="result-box">
-        <span class="result-label">مبيعات اليوم</span>
-        <span id="salesResult" class="result-value">0.00 د.أ</span>
-      </div>
-
-      <p id="profitNote" class="profit-note"></p>
-
-      <button id="saveBtn" class="btn btn-primary btn-wide">حفظ جرد اليوم</button>
-      <p id="saveMsg" class="save-msg"></p>
     </div>
-
-    <button id="goRecords" class="btn btn-outline btn-wide">سجل الجرد</button>
-  </main>
-</section>
-
-<!-- ===== شاشة سجل الجرد ===== -->
-<section id="recordsScreen" class="screen hidden">
-  <header class="topbar">
-    <div class="topbar-title">
-      <span class="brand-icon small">📒</span>
-      <h1>سجل الجرد</h1>
-    </div>
-    <div class="topbar-user">
-      <span id="welcomeUser2" class="welcome"></span>
-      <button id="logoutBtn2" class="btn btn-ghost">تسجيل الخروج</button>
-    </div>
-  </header>
-
-  <main class="content">
-    <button id="backToMain" class="link-btn back-link">← رجوع للجرد</button>
-
-    <div class="card table-card">
-      <table id="recordsTable">
-        <thead>
-          <tr>
-            <th>التاريخ</th>
-            <th>كاش أمس</th>
-            <th>كاش اليوم</th>
-            <th>المشتريات</th>
-            <th>المصاريف</th>
-            <th>المبيعات</th>
-          </tr>
-        </thead>
-        <tbody id="recordsBody"></tbody>
-      </table>
-      <p id="noRecords" class="no-records hidden">ما في جرد محفوظ لهسا. ابدأ بحفظ أول يوم من صفحة الجرد.</p>
-    </div>
-  </main>
-</section>
-
-<!-- ===== نافذة تفاصيل اليوم ===== -->
-<div id="detailModal" class="modal-overlay hidden">
-  <div class="modal-box">
-    <button id="closeModal" class="modal-close">✕</button>
-    <h2 id="modalDate"></h2>
-    <div class="modal-grid" id="modalBody"></div>
   </div>
 </div>
 
-<script src="script.js"></script>
+<script>
+/* أغصان الزهور: رسم نباتي بالـ SVG (ساق منحنية، أوراق لوزية، أزهار خماسية، براعم) */
+function floraDefs(){
+  return '<svg class="defs" width="0" height="0" aria-hidden="true" focusable="false"><defs>'
+   +'<linearGradient id="fl-lg0" x1="0" x2="1"><stop offset="0" stop-color="#6f8056"/><stop offset="1" stop-color="#a6b382"/></linearGradient>'
+   +'<linearGradient id="fl-lg1" x1="0" x2="1"><stop offset="0" stop-color="#7d8d5e"/><stop offset="1" stop-color="#b4bf92"/></linearGradient>'
+   +'<linearGradient id="fl-st" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#7a6542"/><stop offset=".55" stop-color="#8a8a58"/><stop offset="1" stop-color="#93a070"/></linearGradient>'
+   +'<radialGradient id="fl-pg" cx=".5" cy=".92" r=".95"><stop offset="0" stop-color="#e3c88f"/><stop offset=".28" stop-color="#f7ecd5"/><stop offset=".75" stop-color="#fffdf6"/><stop offset="1" stop-color="#f4e6c9"/></radialGradient>'
+   +'</defs></svg>';
+}
+function floraSprig(corner,seed){
+  let s=seed|0;
+  const R=()=>{s=s+0x6D2B79F5|0;let t=Math.imul(s^s>>>15,1|s);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296};
+  const n=v=>Math.round(v*10)/10;
+  const segs=[[8,440,26,350,4,285,28,215],[28,215,52,145,52,105,44,14]],pts=[];
+  segs.forEach((p,si)=>{for(let i=si?1:0;i<=100;i++){const t=i/100,u=1-t;pts.push([u*u*u*p[0]+3*u*u*t*p[2]+3*u*t*t*p[4]+t*t*t*p[6],u*u*u*p[1]+3*u*u*t*p[3]+3*u*t*t*p[5]+t*t*t*p[7]])}});
+  const cum=[0];for(let i=1;i<pts.length;i++)cum.push(cum[i-1]+Math.hypot(pts[i][0]-pts[i-1][0],pts[i][1]-pts[i-1][1]));
+  const tot=cum[cum.length-1];
+  const at=f=>{const d=Math.min(f,.999)*tot;let i=1;while(i<cum.length-1&&cum[i]<d)i++;const k=(d-cum[i-1])/((cum[i]-cum[i-1])||1),a=pts[i-1],b=pts[i];return{x:a[0]+(b[0]-a[0])*k,y:a[1]+(b[1]-a[1])*k,a:Math.atan2(b[1]-a[1],b[0]-a[0])*180/Math.PI}};
+  const leaf=(L,v)=>{const W=L*.3;return '<path d="M0 0C'+n(L*.2)+' '+n(-W)+' '+n(L*.68)+' '+n(-W*.9)+' '+n(L)+' 0C'+n(L*.68)+' '+n(W*.9)+' '+n(L*.2)+' '+n(W)+' 0 0Z" fill="url(#fl-lg'+v+')"/><path d="M1 0L'+n(L*.86)+' 0" stroke="#eef0d8" stroke-opacity=".5" stroke-width=".45" fill="none"/>'};
+  const bloom=(r,rot)=>{let o='<g transform="rotate('+n(rot)+')">';
+    for(let i=0;i<5;i++)o+='<path transform="rotate('+i*72+')" d="M0 0C'+n(-.6*r)+' '+n(-.2*r)+' '+n(-.72*r)+' '+n(-.95*r)+' '+n(-.13*r)+' '+n(-r)+'Q0 '+n(-.86*r)+' '+n(.13*r)+' '+n(-r)+'C'+n(.72*r)+' '+n(-.95*r)+' '+n(.6*r)+' '+n(-.2*r)+' 0 0Z" fill="url(#fl-pg)" stroke="#d3b577" stroke-width=".35" stroke-linejoin="round"/>';
+    for(let i=0;i<8;i++){const a=(i*45+R()*20)*Math.PI/180,l=r*(.3+R()*.14);o+='<path d="M0 0L'+n(Math.cos(a)*l)+' '+n(Math.sin(a)*l)+'" stroke="#a97f45" stroke-width=".35"/><circle cx="'+n(Math.cos(a)*l)+'" cy="'+n(Math.sin(a)*l)+'" r="'+n(r*.045+.3)+'" fill="#b9975b"/>'}
+    return o+'<circle r="'+n(r*.1)+'" fill="#c49a52"/></g>'};
+  const bud=(r,rot)=>'<g transform="rotate('+n(rot)+')"><path d="M0 0C'+n(-.55*r)+' '+n(-.3*r)+' '+n(-.5*r)+' '+n(-1.2*r)+' 0 '+n(-1.5*r)+'C'+n(.5*r)+' '+n(-1.2*r)+' '+n(.55*r)+' '+n(-.3*r)+' 0 0Z" fill="url(#fl-pg)" stroke="#d3b577" stroke-width=".3"/><path d="M0 0C'+n(-.38*r)+' '+n(-.2*r)+' '+n(-.32*r)+' '+n(-.55*r)+' 0 '+n(-.6*r)+'C'+n(.32*r)+' '+n(-.55*r)+' '+n(.38*r)+' '+n(-.2*r)+' 0 0Z" fill="#8f9f6c"/></g>';
+  const anim=(c,sp,amp)=>'class="'+c+'" style="--s:'+(sp+R()*3.5).toFixed(1)+'s;--d:-'+(R()*6).toFixed(1)+'s;--a:'+amp+'deg"';
+  let g='<path d="M8 440C26 350 4 285 28 215C52 145 52 105 44 14" fill="none" stroke="url(#fl-st)" stroke-width="2" stroke-linecap="round"/>';
+  let i=0;
+  for(let f=.09;f<.92;f+=.075,i++){const p=at(f),side=i%2?1:-1,L=(21-9*f)*(.9+R()*.25);
+    g+='<g transform="translate('+n(p.x)+' '+n(p.y)+') rotate('+n(p.a+side*(48+R()*14))+')"><g '+anim('lf',5,2.2)+'>'+leaf(L,i%2)+'</g></g>'}
+  [[.20,1],[.37,-1],[.54,1],[.71,-1]].forEach((t,k)=>{
+    const f=t[0],side=t[1],p=at(f),len=(side>0?34:26)*(1-.3*f)*(.92+R()*.16),bend=-side*len*.22;
+    g+='<g transform="translate('+n(p.x)+' '+n(p.y)+') rotate('+n(p.a+side*55)+')"><g '+anim('tw',6,2.6)+'>'
+      +'<path d="M0 0Q'+n(len*.5)+' '+n(bend*.6)+' '+n(len)+' '+n(bend)+'" fill="none" stroke="#8a8a58" stroke-width="1.1" stroke-linecap="round"/>'
+      +'<g transform="translate('+n(len*.5)+' '+n(bend*.55)+') rotate('+side*40+')">'+leaf(10.5,k%2)+'</g>'
+      +(k%2?'<g transform="translate('+n(len*.3)+' '+n(bend*.34)+') rotate('+(side*50+90)+')">'+bud(3,0)+'</g>':'')
+      +'<g transform="translate('+n(len)+' '+n(bend)+')">'+bloom(5.6+R()*1.6,R()*72)+'</g></g></g>'});
+  [[.04,9],[.30,7],[.58,7.4]].forEach(t=>{const p=at(t[0]);g+='<g transform="translate('+n(p.x)+' '+n(p.y)+')">'+bloom(t[1],R()*72)+'</g>'});
+  const tp=at(1);
+  g+='<g transform="translate('+n(tp.x)+' '+n(tp.y)+')"><g transform="rotate(-24)">'+bud(4,0)+'</g><g transform="rotate(26)">'+bud(3.4,0)+'</g>'+bloom(9.5,R()*72)+'</g>';
+  const T={bl:'',br:' transform="translate(100 0) scale(-1 1)"',tl:' transform="translate(0 440) scale(1 -1)"',tr:' transform="translate(100 440) scale(-1 -1)"'};
+  return '<svg class="sp '+corner+'" viewBox="0 0 100 440" aria-hidden="true" focusable="false"><g'+T[corner]+'>'+g+'</g></svg>';
+}
+
+(function(){
+const $=s=>document.querySelector(s), rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+/* أغصان الزهور */
+$('#flowers').innerHTML=floraDefs()+[['tl',3],['tr',8],['bl',15],['br',22]].map(x=>floraSprig(x[0],x[1])).join('');
+
+/* غبار ذهبي */
+if(!rm){let d='';for(let i=0;i<16;i++)d+='<i style="left:'+(Math.random()*100)+'%;animation-duration:'+(9+Math.random()*9)+'s;animation-delay:'+(-Math.random()*14)+'s"></i>';$('#dust').innerHTML=d}
+
+/* فتح الظرف */
+let opened=false;
+function openEnv(){
+  if(opened)return;opened=true;
+  Music.gesture();
+  $('#env').classList.add('open');$('#hint').classList.add('hide');
+  const w=rm?200:2900;
+  setTimeout(()=>{
+    $('#stage').classList.add('done');
+    document.body.classList.remove('lock');
+    scrollTo(0,0);
+    $('#main').classList.add('go');
+    $('#mus').classList.add('show');
+    reveal();
+  },w);
+}
+$('#env').addEventListener('click',openEnv);
+
+/* ظهور تدريجي عند التمرير */
+function reveal(){
+  const els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(e=>e.classList.add('in'));return}
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+  els.forEach(e=>io.observe(e));
+}
+
+/* العداد التنازلي: الخميس 5 نوفمبر 2026 الساعة 7 مساءً بتوقيت عمّان */
+const start=new Date('2026-11-05T19:00:00+03:00'),end=new Date('2026-11-05T21:00:00+03:00');
+const ids={d:$('#d'),h:$('#h'),m:$('#m'),s:$('#s')},msg=$('#cdmsg');
+function set(el,v){v=String(v).padStart(2,'0');if(el.textContent!==v){el.textContent=v;if(!rm){el.classList.add('t');setTimeout(()=>el.classList.remove('t'),300)}}}
+function tick(){
+  const now=new Date();let diff=start-now;
+  if(diff<=0){diff=0;msg.textContent=now<end?'الحفل جارٍ الآن، حيّاكم الله':'تمّت الفرحة بحمد الله، شكرًا لحضوركم'}
+  else msg.textContent='ما تبقّى على الفرحة بإذن الله';
+  const s=Math.floor(diff/1000);
+  set(ids.d,Math.floor(s/86400));set(ids.h,Math.floor(s%86400/3600));set(ids.m,Math.floor(s%3600/60));set(ids.s,s%60);
+}
+tick();setInterval(tick,1000);
+
+/* رابط التقويم (16:00 إلى 18:00 بتوقيت UTC) */
+const CAL_URL='https://calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent('خطوبة جهاد وديما')+'&dates=20261105T160000Z/20261105T180000Z&location='+encodeURIComponent('قاعة أعمدة، الزرقاء')+'&details='+encodeURIComponent('اللهم بارك لهما وبارك عليهما واجمع بينهما في خير');
+$('#calLink').href=CAL_URL;
+
+/* تنبيه قصير */
+const b=$('#mus'),t=$('#toast');let tm;
+function toast(x,ms){t.textContent=x;t.classList.add('show');clearTimeout(tm);tm=setTimeout(()=>t.classList.remove('show'),ms||4600)}
+
+/* الأغنية: مشغّل يوتيوب مخفي يبدأ من الدقيقة 1:00 ويعيد الدورة منها */
+const Music=(function(){
+  const VIDEO_ID='Hp8WTVqR_0U',START=60,YT_URL='https://youtu.be/Hp8WTVqR_0U?t=60';
+  let p=null,ready=false,failed=false,started=false,userPaused=false,wantPlay=false,playing=false,errShown=false;
+  function ui(on){playing=on;b.classList.toggle('on',on)}
+  let failMsg='';
+  function fail(msg){failed=true;failMsg=msg;b.classList.add('err');if(opened&&!errShown){errShown=true;toast(msg,6500)}}
+  function load(){
+    window.onYouTubeIframeAPIReady=function(){
+      try{
+        const vars={start:START,controls:0,disablekb:1,fs:0,rel:0,playsinline:1,iv_load_policy:3,modestbranding:1};
+        if(/^https?:$/.test(location.protocol))vars.origin=location.origin;
+        p=new YT.Player('ytp',{width:200,height:200,videoId:VIDEO_ID,playerVars:vars,events:{onReady,onStateChange,onError}});
+      }catch(e){fail('تعذّر تجهيز مشغّل الأغنية.')}
+    };
+    const s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';s.async=true;
+    s.onerror=()=>fail('تعذّر تحميل مشغّل الأغنية، تحقّق من الاتصال بالإنترنت.');
+    document.head.appendChild(s);
+  }
+  function start(){
+    if(!ready||failed)return;
+    try{
+      if(!started)p.seekTo(START,true);
+      p.unMute();p.setVolume(100);p.playVideo();
+    }catch(e){fail('تعذّر تشغيل الأغنية.')}
+  }
+  function onReady(){
+    ready=true;
+    try{p.seekTo(START,true);p.playVideo()}catch(e){}   /* محاولة التشغيل التلقائي */
+    setTimeout(()=>{if(!playing)wantPlay=true},1500);
+    if(wantPlay&&!userPaused)start();
+  }
+  function onStateChange(e){
+    const S=YT.PlayerState;
+    if(e.data===S.PLAYING){
+      if(!started){started=true;try{if(p.getCurrentTime()<START-1)p.seekTo(START,true)}catch(_){}}
+      ui(true);
+    }else if(e.data===S.PAUSED){ui(false)}
+    else if(e.data===S.ENDED){ui(false);if(!userPaused){try{p.seekTo(START,true);p.playVideo()}catch(_){}}}
+  }
+  function onError(e){
+    const c=e&&e.data;
+    fail(c===101||c===150||c===153?'صاحب الفيديو لا يسمح بتشغيله داخل المواقع.':(c===100||c===2?'تعذّر العثور على الأغنية.':'تعذّر تشغيل الأغنية.'));
+  }
+  /* أول تفاعل من الزائر (الضغط على الظرف أو أي نقرة) */
+  function gesture(){
+    if(failed){if(!errShown){errShown=true;toast(failMsg,6500)}return}
+    if(userPaused||playing)return;
+    if(!ready){wantPlay=true;return}
+    start();
+    setTimeout(()=>{if(!playing&&!userPaused&&!failed&&opened)toast('إذا لم تبدأ الأغنية، اضغط زر الموسيقى في أعلى الصفحة.')},2200);
+  }
+  ['click','touchend','keydown'].forEach(ev=>document.addEventListener(ev,function once(){
+    if(!opened)return;                     /* يبدأ التشغيل عند فتح الظرف أو أول تفاعل بعده */
+    document.removeEventListener(ev,once,true);
+    if(!started&&!userPaused)gesture();
+  },true));
+  b.addEventListener('click',()=>{
+    if(failed){toast(failMsg||'تعذّر تشغيل الأغنية داخل الموقع.',5200);return}
+    if(!ready){wantPlay=true;userPaused=false;toast('جارٍ تجهيز الأغنية…',2200);return}
+    if(playing){userPaused=true;try{p.pauseVideo()}catch(_){}}
+    else{userPaused=false;try{if(!started)p.seekTo(START,true);p.unMute();p.playVideo()}catch(_){fail('تعذّر تشغيل الأغنية.')}}
+  });
+  load();
+  return{gesture};
+})();
+
+/* تأكيد الحضور */
+const R=$('#rsvp'),box=R.querySelector('.mdl-box'),fv=$('#rsvpFormView'),dv=$('#rsvpDoneView'),form=$('#rsvpForm'),rErr=$('#rErr'),dErr=$('#dErr'),sub=$('#rSubmit');
+const nm=$('#rName'),ph=$('#rPhone'),ct=$('#rCount'),nt=$('#rNotes'),hp=$('#rHp');
+const OPT={1:'شخص واحد',2:'شخصان'},GEN={1:'شخص واحد',2:'شخصين'};
+for(let i=1;i<=10;i++){const o=document.createElement('option');o.value=i;o.textContent=OPT[i]||i+' أشخاص';ct.appendChild(o)}
+let sending=false,current=null,lastFocus=null;
+const api=()=>window.RSVP;
+function friendly(e){
+  const c=e&&e.code;
+  if(c==='not-configured')return 'نظام تأكيد الحضور غير مفعّل بعد (إعدادات Firebase غير مكتملة). يرجى التواصل مع أصحاب الدعوة مباشرة.';
+  if(c==='timeout'||c==='unavailable'||c==='auth/network-request-failed')return 'تعذّر الاتصال. تحقّق من الإنترنت وحاول مرة أخرى.';
+  if(c==='permission-denied')return 'تعذّر الحفظ: صلاحيات قاعدة البيانات تمنع التسجيل. يرجى إبلاغ أصحاب الدعوة.';
+  if(c==='auth/operation-not-allowed'||c==='auth/admin-restricted-operation')return 'تعذّر الحفظ: تسجيل الدخول المجهول غير مفعّل في Firebase. يرجى إبلاغ أصحاب الدعوة.';
+  if(c==='auth/unauthorized-domain'||c==='auth/invalid-api-key'||c==='auth/api-key-not-valid.-please-pass-a-valid-api-key.')return 'تعذّر الحفظ: إعدادات الموقع في Firebase غير صحيحة (النطاق أو المفتاح). يرجى إبلاغ أصحاب الدعوة.';
+  if(c==='failed-precondition'||c==='not-found')return 'تعذّر الحفظ: قاعدة بيانات Firestore لم تُنشأ بعد. يرجى إبلاغ أصحاب الدعوة.';
+  return 'تعذّر حفظ التأكيد. حاول مرة أخرى بعد قليل.';
+}
+function showForm(prefill){
+  dv.hidden=true;fv.hidden=false;rErr.textContent='';
+  nm.value=prefill?prefill.name:nm.value;ph.value=prefill?prefill.phone:ph.value;ct.value=prefill?prefill.count:(ct.value||1);nt.value=prefill?prefill.notes:nt.value;
+  sub.textContent=prefill?'حفظ التعديل':'تأكيد الحضور';
+  setTimeout(()=>nm.focus(),60);
+}
+function showDone(d,isNew){
+  current=d;fv.hidden=true;dv.hidden=false;dErr.textContent='';$('#cancelAsk').hidden=true;$('#rCancel').hidden=false;
+  $('#doneTitle').textContent=isNew===false?'تم حفظ التعديل':'شكرًا لتأكيد حضورك';
+  $('#doneText').textContent='تم تسجيل حضورك يا '+d.name+' لعدد '+(GEN[d.count]||d.count+' أشخاص')+'. نتشرف بحضوركم ونسعد بلقائكم بإذن الله.';
+  $('#rsvpOpenTxt').textContent='تم تأكيد حضورك · تعديل';
+  setTimeout(()=>$('#calLink').focus(),60);
+}
+function openModal(){
+  lastFocus=document.activeElement;R.hidden=false;document.body.classList.add('mo');
+  if(current){showDone(current)}else{showForm();loadExisting()}
+  box.focus({preventScroll:true});
+  if(!current)setTimeout(()=>nm.focus(),60);
+}
+function closeModal(){R.hidden=true;document.body.classList.remove('mo');if(lastFocus&&lastFocus.focus)lastFocus.focus()}
+async function loadExisting(){
+  try{
+    if(!api())return;
+    const d=await api().get();
+    if(d&&!current){current={name:d.name,phone:d.phone||'',count:d.count,notes:d.notes||''};if(!R.hidden&&!sending)showDone(current)}
+  }catch(e){}
+}
+$('#rsvpOpen').addEventListener('click',openModal);
+R.addEventListener('click',e=>{if(e.target.hasAttribute('data-close'))closeModal()});
+document.addEventListener('keydown',e=>{
+  if(R.hidden)return;
+  if(e.key==='Escape'){closeModal();return}
+  if(e.key==='Tab'){
+    const f=[...box.querySelectorAll('button,a[href],input,select,textarea')].filter(x=>!x.closest('[hidden]')&&!x.disabled&&x.tabIndex>=0&&x.offsetParent!==null);
+    if(!f.length)return;const a=f[0],z=f[f.length-1];
+    if(e.shiftKey&&(document.activeElement===a||document.activeElement===box)){e.preventDefault();z.focus()}
+    else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus()}
+  }
+});
+form.addEventListener('submit',async e=>{
+  e.preventDefault();
+  if(sending)return;
+  const name=nm.value.trim().replace(/\s+/g,' '),phone=ph.value.trim(),count=parseInt(ct.value,10),notes=nt.value.trim();
+  nm.removeAttribute('aria-invalid');ph.removeAttribute('aria-invalid');rErr.textContent='';
+  if(name.length<2){nm.setAttribute('aria-invalid','true');rErr.textContent='يرجى كتابة الاسم.';nm.focus();return}
+  if(phone&&!/^[+0-9\s\-()]{7,20}$/.test(phone)){ph.setAttribute('aria-invalid','true');rErr.textContent='رقم الهاتف غير صحيح، أو اتركه فارغًا.';ph.focus();return}
+  if(!(count>=1&&count<=10)){rErr.textContent='يرجى اختيار عدد الحضور.';return}
+  const isNew=!current;
+  if(hp.value){showDone({name,phone,count,notes},isNew);return}   /* فخ للروبوتات: لا يُحفظ شيء */
+  sending=true;sub.disabled=true;sub.setAttribute('aria-busy','true');sub.textContent='جارٍ الإرسال…';
+  try{
+    if(!api())throw{code:'not-configured'};
+    await api().save({name,phone,count,notes});
+    showDone({name,phone,count,notes},isNew);
+  }catch(err){
+    console.warn('[RSVP]',err);rErr.textContent=friendly(err);
+    sub.textContent=current?'حفظ التعديل':'تأكيد الحضور';
+  }finally{sending=false;sub.disabled=false;sub.removeAttribute('aria-busy')}
+});
+$('#rEdit').addEventListener('click',()=>showForm(current));
+$('#rCancel').addEventListener('click',()=>{$('#cancelAsk').hidden=false;$('#rCancel').hidden=true;$('#cancelYes').focus()});
+$('#cancelNo').addEventListener('click',()=>{$('#cancelAsk').hidden=true;$('#rCancel').hidden=false;$('#rCancel').focus()});
+$('#cancelYes').addEventListener('click',async()=>{
+  if(sending)return;sending=true;$('#cancelYes').disabled=true;dErr.textContent='';
+  try{
+    if(!api())throw{code:'not-configured'};
+    await api().remove();
+    current=null;$('#rsvpOpenTxt').textContent='تأكيد الحضور';nm.value=ph.value=nt.value='';ct.value=1;
+    closeModal();toast('تم إلغاء تأكيد الحضور.');
+  }catch(err){console.warn('[RSVP]',err);dErr.textContent=friendly(err);$('#cancelAsk').hidden=true;$('#rCancel').hidden=false}
+  finally{sending=false;$('#cancelYes').disabled=false}
+});
+/* إظهار أن الحضور مؤكَّد مسبقًا من نفس المتصفح */
+setTimeout(async()=>{try{if(window.RSVP&&await window.RSVP.ready){const d=await window.RSVP.get();if(d){current={name:d.name,phone:d.phone||'',count:d.count,notes:d.notes||''};$('#rsvpOpenTxt').textContent='تم تأكيد حضورك · تعديل'}}}catch(e){}},300);
+})();
+</script>
+<script type="module">
+/* حفظ تأكيدات الحضور في Firebase (Firestore + مصادقة مجهولة). الإعدادات في firebase-config.js */
+const timeout=(p,ms)=>Promise.race([p,new Promise((_,j)=>setTimeout(()=>j(Object.assign(new Error('timeout'),{code:'timeout'})),ms))]);
+const init=(async()=>{
+  let cfg;
+  try{cfg=(await import('./firebase-config.js')).firebaseConfig}catch(e){throw Object.assign(new Error('firebase-config.js غير موجود أو لا يُحمَّل'),{code:'not-configured'})}
+  if(!cfg||!cfg.apiKey||!cfg.projectId||/PASTE|YOUR/i.test(cfg.apiKey+cfg.projectId))throw Object.assign(new Error('لم يتم تعبئة إعدادات Firebase في firebase-config.js'),{code:'not-configured'});
+  const b='https://www.gstatic.com/firebasejs/10.12.2/';
+  const [A,Au,F]=await Promise.all([import(b+'firebase-app.js'),import(b+'firebase-auth.js'),import(b+'firebase-firestore.js')]);
+  const app=A.initializeApp(cfg),auth=Au.getAuth(app),db=F.getFirestore(app);
+  const user=await timeout(new Promise((res,rej)=>{const off=Au.onAuthStateChanged(auth,u=>{if(u){off();res(u)}else Au.signInAnonymously(auth).catch(rej)},rej)}),15000);
+  return{F,db,uid:user.uid};
+})();
+init.catch(e=>console.warn('[RSVP]',e.code||'',e.message||e));
+const ref=async()=>{const c=await init;return{c,r:c.F.doc(c.db,'rsvps',c.uid)}};
+/* إشعار البريد عبر EmailJS (مفتاح عام؛ البريد المستلم يُضبط داخل قالب EmailJS ولا يظهر في الكود) */
+async function notify(d){
+  try{
+    const n=(await import('./firebase-config.js')).notifyConfig;
+    if(!n||!n.serviceId||!n.templateId||!n.publicKey||/PASTE/i.test(n.serviceId+n.templateId+n.publicKey))return;
+    const res=await timeout(fetch('https://api.emailjs.com/api/v1.0/email/send',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({service_id:n.serviceId,template_id:n.templateId,user_id:n.publicKey,
+        template_params:{guest_name:d.name,guest_count:String(d.count),guest_phone:d.phone||'-',guest_notes:d.notes||'-'}})}),10000);
+    if(!res.ok){const body=await res.text().catch(()=>'');console.warn('[notify] EmailJS رفض الطلب ('+res.status+'): '+body+' — تحقق من Service ID وTemplate ID والمفتاح العام وقيود النطاق في EmailJS');return false}
+    return true;
+  }catch(e){console.warn('[notify] تعذّر إرسال الإشعار (التسجيل نفسه محفوظ):',e);return false}
+}
+window.RSVP={
+  ready:init.then(()=>true,()=>false),
+  async get(){const{c,r}=await ref();const s=await timeout(c.F.getDoc(r),12000);return s.exists()?s.data():null},
+  async save(d){
+    const{c,r}=await ref(),prev=await timeout(c.F.getDoc(r),12000),now=c.F.serverTimestamp();
+    await timeout(c.F.setDoc(r,{uid:c.uid,name:d.name,phone:d.phone,count:d.count,notes:d.notes,createdAt:prev.exists()?prev.data().createdAt:now,updatedAt:now}),15000);
+    if(!prev.exists())notify(d);   /* إشعار بريد لتأكيد جديد فقط، ولا يؤثر فشله على نجاح الحفظ */
+  },
+  async remove(){const{c,r}=await ref();await timeout(c.F.deleteDoc(r),15000)}
+};
+</script>
 </body>
 </html>
